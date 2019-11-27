@@ -1,0 +1,6 @@
+*scratch/
+*venv/
+*migrations/
+*__pycache__/
+
+*config.py
