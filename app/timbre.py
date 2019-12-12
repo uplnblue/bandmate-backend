@@ -7,7 +7,7 @@ def getSegmentInfo(segments):
         'segment_start_times': []
     }
     for segment in segments:
-        seg_info['timbres'].append(np.array(segment['timbre'][1:6]))
+        seg_info['timbres'].append(np.array(segment['timbre']))
         seg_info['segment_start_times'].append(segment['start'])
     return seg_info
 
