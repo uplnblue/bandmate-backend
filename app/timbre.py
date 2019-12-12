@@ -29,8 +29,11 @@ def getSectionInfo(sections):
 # TODO: add for segments, and other precisions
 def getThetas(segment_info, section_info, bySection=False, timescale_ms=None):
 
+    def radToDegrees(rad):
+        return rad * (360 / (2 * np.pi))
+
     def getAngle(v1, v2):
-        return np.arccos(v1 @ v2 / (np.linalg.norm(v1) * np.linalg.norm(v2)))
+        return radToDegrees(np.arccos(v1 @ v2 / (np.linalg.norm(v1) * np.linalg.norm(v2))))
 
     animation_data = {
         'thetas': [],

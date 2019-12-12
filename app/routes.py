@@ -62,8 +62,6 @@ def timbre_analysis():
 
     animation_data = timbre.getThetas(seg_info, sect_info, bySection=False, timescale_ms=None)
 
-    print(animation_data['thetas'][:10])
-
     # send the response to the front end
     return jsonify({
         'code': 200,
